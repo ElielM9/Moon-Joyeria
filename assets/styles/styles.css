@@ -1,0 +1,351 @@
+/** VARIABLES **/
+
+:root {
+    /*FUENTES*/
+    --noto: "Noto Serif", serif;
+    --openSans: 'Open Sans', sans-serif;
+    /*COLORES*/
+    --moradoOscuro: #170312;
+    --moradoMedio: #33032d;
+    --moradoClaro: #531253;
+    --grisClaro: #eaeaea;
+    --blanco: #f4fffd;
+}
+
+/** GLOBALES **/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 2;
+    font-family: var(--openSans);
+}
+
+.container {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.2;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+p {
+    font-size: 2.2rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/** MOBILE **/
+
+/*HEADER*/
+
+.content-header .text {
+    width: 100vw;
+    height: 100vh;
+    font-size: 5rem;
+    font-weight: 400;
+    font-family: var(--noto);
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: purple;
+    mix-blend-mode: multiply;
+}
+
+.content-header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/bg-girl.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.content-header .fondo {
+    width: 0%;
+    height: 100%;
+    max-width: 100%;
+    background-image: url(../img/bg-top.png);
+}
+
+/*MENU*/
+
+.menu {
+    background: var(--moradoMedio);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: .50rem;
+    z-index: 999;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: var(--noto);
+    font-style: italic;
+    margin-bottom: 6rem;
+}
+
+.menu a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background: var(--moradoMedio);
+    margin: 0 0rem;
+    transition: .5s all ease;
+    color: var(--grisClaro);
+}
+
+.menu a:hover {
+    transform: translateY(18px);
+    background: var(--moradoClaro);
+}
+
+/* NOSOTROS */
+
+.nosotros {
+    margin-bottom: 6rem;
+}
+
+.subtitulo {
+    color: var(--moradoOscuro);
+    font-size: 2rem;
+    font-family: var(--noto);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    z-index: 2;
+}
+
+.subtitulo span {
+    position: relative;
+    background-color: var(--grisClaro);
+    padding: 0 1.5rem;
+    z-index: 99;
+}
+
+.subtitulo::after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    background: var(--moradoOscuro);
+    position: relative;
+    top: -29px;
+    z-index: 1;
+}
+
+.titulo {
+    width: 70%;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 5rem;
+}
+
+.nosotros .link {
+    display: inline-block;
+    margin-top: 4rem;
+    color: var(--moradoClaro);
+    font-weight: 700;
+    border-bottom: 1px solid transparent;
+    transition: .3s all ease;
+}
+
+.nosotros .link:hover {
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--moradoClaro);
+}
+
+/* PRODUCTOS */
+
+.productos {
+    background: var(--grisClaro);
+    padding: 2rem;
+    margin-bottom: 6rem;
+}
+
+.productos .producto {
+    position: relative;
+    width: 100%;
+}
+
+.productos .overlay {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--moradoClaro);
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.productos .producto:hover .overlay {
+    width: 100%;
+    opacity: .8;
+}
+
+.productos .producto .overlay_text {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    white-space: nowrap;
+    color: var(--blanco);
+    font-size: 1rem;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-top: 1px solid var(--blanco);
+    border-bottom: 1px solid var(--blanco);
+}
+
+.productos .btn-productos {
+    background: var(--moradoClaro);
+    color: var(--blanco);
+    padding: 7px 2rem;
+    width: 50%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.4rem;
+    border: 2px solid transparent;
+    transition: .3s ease;
+}
+
+.productos .btn-productos:hover {
+    background: transparent;
+    border: 2px solid var(--moradoClaro);
+    color: var(--moradoClaro);
+}
+
+/* SEPARADOR */
+
+.separador {
+    width: 100%;
+    height: 25rem;
+    background-image: url(../img/bg-separator.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 6rem;
+}
+
+.separador p {
+    width: 100%;
+    height: 100%;
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: var(--noto);
+    padding: 1rem;
+}
+
+/* ACERCA DE */
+
+.acerca-de {
+    margin-bottom: 6rem;
+}
+
+/* GALERIA */
+
+.galeria {
+    margin-bottom: 6rem;
+}
+
+.galeria img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CONTACTO */
+.contacto{
+    margin-bottom: 6rem;
+}
+
+.contacto div p svg{
+    fill: var(--moradoMedio);
+}
+
+.redes{
+    padding: 1rem;
+    background: var(--moradoClaro);
+}
+
+.redes svg{
+    padding: 5px;
+    border-radius: 100%;
+    width: 5rem;
+    height: 4rem;
+    transition: .3s ease all;
+    fill: var(--blanco);
+}
+
+
+.redes svg:hover{
+    transform: scale(1.2);
+}
+/** ESCRITORIO **/
+
+@media(min-width: 600px) {
+    /* HEADER */
+    .content-header .text {
+        font-size: 8rem;
+    }
+    /*MENU*/
+    .menu a {
+        font-size: 2.5rem;
+        margin: 0 1rem;
+    }
+    /* NOSOTROS */
+    .titulo {
+        font-size: 4.4rem;
+    }
+    .nosotros .link:hover {
+        letter-spacing: 3px;
+    }
+    /* PRODUCTOS */
+    .productos .producto .overlay_text {
+        font-size: 1.8rem;
+    }
+    /* SEPARADOR */
+    .separador p {
+        font-size: 2.4rem;
+    }
+    /* ACERCA DE */
+    /* GALERIA */
+}
