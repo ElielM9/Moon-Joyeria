@@ -1,5 +1,4 @@
 /** VARIABLES **/
-
 :root {
     /*FUENTES*/
     --noto: "Noto Serif", serif;
@@ -74,7 +73,7 @@ img {
 .content-header .text {
     width: 100vw;
     height: 100vh;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 400;
     font-family: var(--noto);
     font-style: italic;
