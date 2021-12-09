@@ -88,7 +88,7 @@ img {
 .content-header {
     width: 100%;
     height: 100vh;
-    background-image: url(../img/bg-girl.jpeg);
+    background-image: url(../assets/img/bg-girl.jpeg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -98,7 +98,7 @@ img {
     width: 0%;
     height: 100%;
     max-width: 100%;
-    background-image: url(../img/bg-top.png);
+    background-image: url(../assets/img/bg-top.png);
 }
 
 /*MENU*/
@@ -170,9 +170,13 @@ img {
 .titulo {
     width: 70%;
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
     display: inline-block;
     margin-bottom: 5rem;
+}
+
+.nosotros p {
+    text-align: left;
 }
 
 .nosotros .link {
@@ -195,6 +199,10 @@ img {
     background: var(--grisClaro);
     padding: 2rem;
     margin-bottom: 6rem;
+}
+
+.productos .titulo {
+    text-align: center;
 }
 
 .productos .producto {
@@ -255,7 +263,7 @@ img {
 .separador {
     width: 100%;
     height: 25rem;
-    background-image: url(../img/bg-separator.jpeg);
+    background-image: url(../assets/img/bg-separator.jpeg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -292,20 +300,20 @@ img {
 }
 
 /* CONTACTO */
-.contacto{
+.contacto {
     margin-bottom: 6rem;
 }
 
-.contacto div p svg{
+.contacto div p svg {
     fill: var(--moradoMedio);
 }
 
-.redes{
+.redes {
     padding: 1rem;
     background: var(--moradoClaro);
 }
 
-.redes svg{
+.redes svg {
     padding: 5px;
     border-radius: 100%;
     width: 5rem;
@@ -315,36 +323,49 @@ img {
 }
 
 
-.redes svg:hover{
+.redes svg:hover {
     transform: scale(1.2);
 }
+
 /** ESCRITORIO **/
 
 @media(min-width: 600px) {
+
     /* HEADER */
     .content-header .text {
         font-size: 8rem;
     }
+
     /*MENU*/
     .menu a {
         font-size: 2.5rem;
         margin: 0 1rem;
     }
+
     /* NOSOTROS */
     .titulo {
-        font-size: 4.4rem;
+        text-align: center;
+        font-size: 4rem;
     }
+
+    .nosotros p {
+        text-align: center;
+    }
+
     .nosotros .link:hover {
         letter-spacing: 3px;
     }
+
     /* PRODUCTOS */
     .productos .producto .overlay_text {
         font-size: 1.8rem;
     }
+
     /* SEPARADOR */
     .separador p {
         font-size: 2.4rem;
     }
+
     /* ACERCA DE */
     /* GALERIA */
 }
